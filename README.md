@@ -1,11 +1,10 @@
-# DBA Challenge 20240802
+# BIKE STORES INC QUERIES 
 
 
 ## Introdução
+Este é um projeto de teste, feito fora de um ambiente corporativo. O objetivo deste é mostrar o conhecimento 
+do criador em T-SQL. Ademais, a estrutura da tabela foi fornecida pelo avaliador. 
 
-Nesse desafio trabalharemos utilizando a base de dados da empresa Bike Stores Inc com o objetivo de obter métricas relevantes para equipe de Marketing e Comercial.
-
-Com isso, teremos que trabalhar com várioas consultas utilizando conceitos como `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `GROUP BY` e `COUNT`.
 
 ### Antes de começar
  
@@ -13,48 +12,40 @@ Com isso, teremos que trabalhar com várioas consultas utilizando conceitos como
 - Considere como deadline da avaliação a partir do início do teste. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
 - Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
  
+## Tecnologias utilizadas
+- SQL Server
+- T-SQL
  
-
-## O projeto
-
-- Criar as consultas utilizando a linguagem escolhida;
-- Entregar o código gerado do Teste.
-
 ### Modelo de Dados:
 
-Para entender o modelo, revisar o diagrama a seguir:
+Para entender o modelo, foi fornecido para a revisão o diagrama a seguir:
 
 ![<img src="samples/model.png" height="500" alt="Modelo" title="Modelo"/>](samples/model.png)
 
+## Passo a Passo do projeto
+- Escolha do banco de dados: Foi selecionado o SQL Server devido a familiaridade com ele.
+- Escrita das tabelas e população da massa de dados para realização dos testes/criação das queries.
+- Foram solicitadas a criação das seguintes queries:
+    - Listar todos Clientes que não tenham realizado uma compra 
+        Localização: './queries/ListarClientesSemCompras.sql';
+    - Listar os Produtos que não tenham sido comprados
+           Localização: './queries/ListaProdutosNaoComprados.sql';
+    - Listar os Produtos sem Estoque
+           Localização: './queries/ListaProdutosSemStock.sql';
+    - Agrupar a quantidade de vendas que uma determinada Marca por Loja. 
+           Localização: './queries/ListarQtdVendarPorAgrupamentoLoja.sql';
+    - Listar os Funcionarios que não estejam relacionados a um Pedido.
+           Localização: './queries/ListarFuncionariosNaoRelacionadoAProdutos.sql';
 
-## Selects
 
-Construir as seguintes consultas:
 
-- Listar todos Clientes que não tenham realizado uma compra;
-- Listar os Produtos que não tenham sido comprados
-- Listar os Produtos sem Estoque;
-- Agrupar a quantidade de vendas que uma determinada Marca por Loja. 
-- Listar os Funcionarios que não estejam relacionados a um Pedido.
+## Como executar
+- Abra o Sql Server
+- Crie um bando de dados: `create database db_bike_store`
+- Após a criação, acesse o banco de dados atráves do comando `use db_bike_store`
+- Execute o script que está no arquivo GerarTabelas (caminho ./tables/*)
+- Na sequencia popule com dados, voce pode utilizar do script `PopularTabela.sql` (caminho ./tables/*)
+- O ambiente estará pronto após isso. Basta ir no diretorio das queries e se divertir.
 
-## Readme do Repositório
-
-- Deve conter o título do projeto
-- Uma descrição sobre o projeto em frase
-- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:  
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)
-
-## Finalização e Instruções para a Apresentação
-
-1. Adicione o link do repositório com a sua solução no teste
-2. Verifique se o Readme está bom e faça o commit final em seu repositório;
-3. Envie e aguarde as instruções para seguir. Caso o teste tenha apresentação de vídeo, dentro da tela de entrega será possível gravar após adicionar o link do repositório. Sucesso e boa sorte. =)
-
-
-## Suporte
-
-Para tirar dúvidas sobre o processo envie uma mensagem diretamente a um especialista no chat da plataforma. 
